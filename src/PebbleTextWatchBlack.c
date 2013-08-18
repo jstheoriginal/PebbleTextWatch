@@ -9,7 +9,7 @@
 
 #define MY_UUID { 0x44, 0x33, 0xE8, 0x88, 0xEB, 0x32, 0x43, 0x50, 0xA6, 0xE1, 0x7E, 0xCC, 0xD5, 0x69, 0x02, 0xED }
 PBL_APP_INFO(MY_UUID,
-             "Text With Date Inverted", "Paul Pullen mod by JS",
+             "Text With Date Black", "Paul Pullen mod by JS",
              1, 0,
              DEFAULT_MENU_ICON,
 #if DEBUG
@@ -203,7 +203,7 @@ void display_initial_time(PblTm *t)
 void configureBoldLayer(TextLayer *textlayer)
 {
 	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD)); // fixed to BITHAM (WAS GOTHAM)
-	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
+	text_layer_set_text_color(textlayer, GColorWhite);
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentLeft);
 }
@@ -212,7 +212,7 @@ void configureBoldLayer(TextLayer *textlayer)
 void configureLightLayer(TextLayer *textlayer)
 {
 	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_BITHAM_42_LIGHT)); // fixed to BITHAM (was GOTHAM)
-	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
+	text_layer_set_text_color(textlayer, GColorWhite);
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentLeft);
 }
@@ -221,7 +221,7 @@ void configureLightLayer(TextLayer *textlayer)
 void configureDayOfWeek(TextLayer *textlayer)
 {
 	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD)); // changed from 14 to 18
-	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
+	text_layer_set_text_color(textlayer, GColorWhite);
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentRight);
 }
@@ -230,7 +230,7 @@ void configureDayOfWeek(TextLayer *textlayer)
 void configureDayOfMonth(TextLayer *textlayer)
 {
 	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHIC_18)); // changed from 14 to 18
-	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
+	text_layer_set_text_color(textlayer, GColorWhite);
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentRight);
 }
@@ -284,9 +284,9 @@ void click_config_provider(ClickConfig **config, Window *window) {
 void handle_init(AppContextRef ctx) {
   	(void)ctx;
 
-	window_init(&window, "PebbleTextWatchInverted");
+	window_init(&window, "PebbleTextWatchBlack");
 	window_stack_push(&window, true);
-	window_set_background_color(&window, GColorWhite); // modified by JS
+	window_set_background_color(&window, GColorBlack);
 
 	// Init resources
 	resource_init_current_app(&APP_RESOURCES);
