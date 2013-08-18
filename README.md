@@ -1,12 +1,11 @@
-Pebble Text Watch With Small Date Inverted
+Pebble Text Watch With Small Date Black
 ==========================================
 
-I've changed this great watch face [here](http://www.mypebblefaces.com/apps/1585/1350/) with the following mods:
+I've changed this great watch face [here](http://www.mypebblefaces.com/apps/1585/1350/) with the following mod:
 
-* changed to black text on white background
 * increased the font size of the date lines to 18 (was 14) for better legibility
 
-[Download .pbw](http://www.mypebblefaces.com/download_app?cID=4487)
+[Download .pbw](http://www.mypebblefaces.com/download_app?cID=4488)
 
 -JS
 
