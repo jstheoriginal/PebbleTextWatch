@@ -203,7 +203,7 @@ void display_initial_time(PblTm *t)
 void configureBoldLayer(TextLayer *textlayer)
 {
 	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD)); // fixed to BITHAM (WAS GOTHAM)
-	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
+	text_layer_set_text_color(textlayer, GColorBlack);
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentLeft);
 }
@@ -212,7 +212,7 @@ void configureBoldLayer(TextLayer *textlayer)
 void configureLightLayer(TextLayer *textlayer)
 {
 	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_BITHAM_42_LIGHT)); // fixed to BITHAM (was GOTHAM)
-	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
+	text_layer_set_text_color(textlayer, GColorBlack);
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentLeft);
 }
@@ -221,7 +221,7 @@ void configureLightLayer(TextLayer *textlayer)
 void configureDayOfWeek(TextLayer *textlayer)
 {
 	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD)); // changed from 14 to 18
-	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
+	text_layer_set_text_color(textlayer, GColorBlack);
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentRight);
 }
@@ -230,7 +230,7 @@ void configureDayOfWeek(TextLayer *textlayer)
 void configureDayOfMonth(TextLayer *textlayer)
 {
 	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHIC_18)); // changed from 14 to 18
-	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
+	text_layer_set_text_color(textlayer, GColorBlack);
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentRight);
 }
@@ -286,7 +286,7 @@ void handle_init(AppContextRef ctx) {
 
 	window_init(&window, "PebbleTextWatchInverted");
 	window_stack_push(&window, true);
-	window_set_background_color(&window, GColorWhite); // modified by JS
+	window_set_background_color(&window, GColorWhite);
 
 	// Init resources
 	resource_init_current_app(&APP_RESOURCES);
@@ -310,11 +310,11 @@ void handle_init(AppContextRef ctx) {
 	configureLightLayer(&line3.nextLayer);
 
 	// top day layer
-	text_layer_init(&topDayLayer, GRect(0, 134, 144, 20));
+	text_layer_init(&topDayLayer, GRect(0, 132, 144, 22)); // modified due to larger text size
 	configureDayOfWeek(&topDayLayer);
 
 	// bottom day layer
-	text_layer_init(&bottomDayLayer, GRect(0, 147, 144, 20));
+	text_layer_init(&bottomDayLayer, GRect(0, 145, 144, 22)); // modified due to larger text size
 	configureDayOfMonth(&bottomDayLayer);
 
 	// Configure time on init
