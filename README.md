@@ -11,7 +11,9 @@ I've changed this great watch face [here](http://www.mypebblefaces.com/apps/1585
 -JS
 
 
-Original white text on black background readme:
+
+
+*Original developer's readme:*
 
 On the first launch of Pebble SDK, TextWatch application was not part of the code examples.
 Many people wanted to change the texts into their own language and with this app we hope that others will improve it 
