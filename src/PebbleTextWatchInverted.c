@@ -7,9 +7,9 @@
 #define DEBUG 0
 #define BUFFER_SIZE 44
 
-#define MY_UUID { 0x49, 0x6E, 0x04, 0xAD, 0x13, 0x2A, 0x48, 0xAB, 0xB1, 0x65, 0x7F, 0xF4, 0xA9, 0x98, 0x72, 0xD2 }
+#define MY_UUID { 0x44, 0x33, 0xE8, 0x88, 0xEB, 0x32, 0x43, 0x50, 0xA6, 0xE1, 0x7E, 0xCC, 0xD5, 0x69, 0x02, 0xED }
 PBL_APP_INFO(MY_UUID,
-             "Text With Date", "Paul Pullen",
+             "Text With Date Inverted", "Paul Pullen mod by JS",
              1, 0,
              DEFAULT_MENU_ICON,
 #if DEBUG
@@ -202,8 +202,8 @@ void display_initial_time(PblTm *t)
 // Configure the first line of text
 void configureBoldLayer(TextLayer *textlayer)
 {
-	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHAM_42_BOLD));
-	text_layer_set_text_color(textlayer, GColorWhite);
+	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD)); // fixed to BITHAM (WAS GOTHAM)
+	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentLeft);
 }
@@ -211,8 +211,8 @@ void configureBoldLayer(TextLayer *textlayer)
 // Configure for the 2nd and 3rd lines
 void configureLightLayer(TextLayer *textlayer)
 {
-	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHAM_42_LIGHT));
-	text_layer_set_text_color(textlayer, GColorWhite);
+	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_BITHAM_42_LIGHT)); // fixed to BITHAM (was GOTHAM)
+	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentLeft);
 }
@@ -220,8 +220,8 @@ void configureLightLayer(TextLayer *textlayer)
 // Configure for top day of week
 void configureDayOfWeek(TextLayer *textlayer)
 {
-	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHIC_14_BOLD));
-	text_layer_set_text_color(textlayer, GColorWhite);
+	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD)); // changed from 14 to 18
+	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentRight);
 }
@@ -229,8 +229,8 @@ void configureDayOfWeek(TextLayer *textlayer)
 // Configure for bottom day of month
 void configureDayOfMonth(TextLayer *textlayer)
 {
-	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
-	text_layer_set_text_color(textlayer, GColorWhite);
+	text_layer_set_font(textlayer, fonts_get_system_font(FONT_KEY_GOTHIC_18)); // changed from 14 to 18
+	text_layer_set_text_color(textlayer, GColorBlack); // modified by JS
 	text_layer_set_background_color(textlayer, GColorClear);
 	text_layer_set_text_alignment(textlayer, GTextAlignmentRight);
 }
@@ -284,9 +284,9 @@ void click_config_provider(ClickConfig **config, Window *window) {
 void handle_init(AppContextRef ctx) {
   	(void)ctx;
 
-	window_init(&window, "TextWatch");
+	window_init(&window, "PebbleTextWatchInverted");
 	window_stack_push(&window, true);
-	window_set_background_color(&window, GColorBlack);
+	window_set_background_color(&window, GColorWhite); // modified by JS
 
 	// Init resources
 	resource_init_current_app(&APP_RESOURCES);
