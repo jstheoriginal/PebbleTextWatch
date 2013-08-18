@@ -310,11 +310,11 @@ void handle_init(AppContextRef ctx) {
 	configureLightLayer(&line3.nextLayer);
 
 	// top day layer
-	text_layer_init(&topDayLayer, GRect(0, 134, 144, 20));
+	text_layer_init(&topDayLayer, GRect(0, 132, 144, 22)); // modified due to larger text size
 	configureDayOfWeek(&topDayLayer);
 
 	// bottom day layer
-	text_layer_init(&bottomDayLayer, GRect(0, 147, 144, 20));
+	text_layer_init(&bottomDayLayer, GRect(0, 145, 144, 22)); // modified due to larger text size
 	configureDayOfMonth(&bottomDayLayer);
 
 	// Configure time on init
