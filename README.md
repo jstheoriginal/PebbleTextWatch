@@ -1,5 +1,17 @@
-Pebble Text Watch With Date
-===========================
+Pebble Text Watch With Small Date Inverted
+==========================================
+
+I've changed this great watch face [here](http://www.mypebblefaces.com/apps/1585/1350/) with the following mods:
+
+* changed to black text on white background
+* increased the font size of the date lines to 18 (was 14) for better legibility
+
+[Download .pbw](http://www.mypebblefaces.com/download_app?cID=4487)
+
+-JS
+
+
+Original white text on black background readme:
 
 On the first launch of Pebble SDK, TextWatch application was not part of the code examples.
 Many people wanted to change the texts into their own language and with this app we hope that others will improve it 
